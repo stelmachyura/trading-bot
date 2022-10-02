@@ -1,0 +1,9 @@
+services:
+  passivbot:
+    build: .
+    container_name: passivbot
+    restart: unless-stopped
+    volumes:
+      - ./:/app/
+    command: python passivbot.py binance_01 XMRUSDT live_configs/binance_default.json
+    
